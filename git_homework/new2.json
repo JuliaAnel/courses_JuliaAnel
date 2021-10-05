@@ -2,5 +2,9 @@
  "name": "Julia",
  "age": 27,
  "pets": null,
- "salary": 1000
+ "salary": 1000,
+ "favourite movie": "The Notebook",
+"favourite series": "MONEY HEIST", 
+"favourite time of the year": "spring",
+"country, wchich I want to visit": "USA" 
 }
