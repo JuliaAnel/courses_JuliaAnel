@@ -1,0 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <name>Julia</name>
+    <age>27</age>
+    <pets />
+    <salary>1000</salary>
+</root>
