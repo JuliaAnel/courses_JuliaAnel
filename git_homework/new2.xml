@@ -4,4 +4,8 @@
     <age>27</age>
     <pets />
     <salary>1000</salary>
+    <favourite movie>The Notebook</favourite movie>
+    <favourite series>MONEY HEIST</favourite series>
+    <favourite time of the year>spring</favourite time of the year>
+    <country wchich I want to visit>USA</country wchich I want to visit>
 </root>
