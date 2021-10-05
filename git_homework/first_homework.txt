@@ -1,0 +1,43 @@
+﻿Первое ДЗ 
+до 04.10.2021
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я -- pwd
+2) Создать папку – mkdir folder
+3) Зайти в папку – cd folder
+4) Создать 3 папки – mkdir folder1 folder2 folder3
+5) Зайти в любую папку -- cd folder1
+6) Создать 5 файлов (3 txt, 2 json) --  touch 1.txt 2.txt 3.txt 4.json 5.json
+7) Создать 3 папки -- mkdir folder4 folder5 folder6
+8. Вывести список содержимого папки -- ls -la
+9) + Открыть любой txt файл -- nano 1.txt
+10) + написать туда что-нибудь, любой текст. – Hello, world!
+11) + сохранить и выйти. – ctrl s, ctrl x
+12) Выйти из папки на уровень выше – cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.       – mv ./folder1/{1.txt,2.txt} ./folder2
+14) скопировать любые 2 файла, которые вы создали, в любую другую                 –cp ./folder2/{1.txt,2,txt} ./folder1
+15) Найти файл по имени – find . –name 1.txt
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает. 
+-- cat ./folder1/1.txt
+17) вывести несколько первых строк из текстового файла  -- head ./folder1/1.txt
+18) вывести несколько последних строк из текстового файла – tail ./folder1/1.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает. – less ./folder1/1.txt
+20) вывести дату и время  -- date
+Отправить  http запрос на сервер
+
+curl 'http://162.55.220.72:5005/get_method?name=Julia&age=27'
+
+Написание скрипта:
+
+nano script.sh
+#!/bin/bash
+cd folder
+mkdir folder7 folder8 folder9
+cd folder7
+touch 4.txt 5.txt 6.txt 4.json 5.json
+mkdir folder1 folder2 folder3
+ls -la
+mv 4.txt 5.txt ./folder1
+Запустить скрипт:  bash script.sh
+
