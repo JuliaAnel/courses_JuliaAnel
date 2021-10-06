@@ -1,11 +1,11 @@
  <?xml version="1.0" encoding="UTF-8" ?>
-<root>
+<user>
     <name>Julia</name>
     <age>27</age>
     <pets />
     <salary>1000</salary>
-    <favourite movie>The Notebook</favourite movie>
-    <favourite series>MONEY HEIST</favourite series>
-    <favourite time of the year>spring</favourite time of the year>
-    <country wchich I want to visit>USA</country wchich I want to visit>
-</root>
+    <favourite_movie>The Notebook</favourite_movie>
+    <favourite_series>MONEY HEIST</favourite_series>
+    <favourite_time_of_the_year>spring</favourite_time_of_the_year>
+    <country_wchich_I_want_to_visit>USA</country_wchich_I_want_to_visit>
+</user>
