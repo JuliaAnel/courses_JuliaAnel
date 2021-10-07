@@ -1,0 +1,74 @@
+
+ 4. Создать файл “new.json” - touch new.json
+ 5. Добавить файл под гит. -- git add new.json
+ 6. Закоммитить файл. -- git commit -m "add new.json"
+ 7. Отправить файл на внешний GitHub репозиторий. -- git push
+ 8. Создать файлы new2.json, new2.xml, new2.txt -- touch new2.json, new2.xml, new2.txt
+ 9. Добавить файлы под гит. -- add .
+ 10. Закоммитить файлы. -- git commit -m "add new files"
+ 11. Отправить файлы на внешний GitHub репозиторий. git push
+ 12. Отредактировать содержание файла “new2.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). -- nano new2.txt Julia; 27 years old; 1000$ ctrl s, ctrl x
+ 13. Отредактировать содержание файла “new2.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON. 
+-- nano new2.json {
+	"name": "Julia",
+	"age": 27,
+	"pets": null,
+	"salary": 1000}
+	ctrl s, ctrl x
+ 14. Добавить и закоммитить “new2.txt” одной строчкой. -- git add new2.txt && git commit -m " add new2.txt"
+ 15. Добавить и закоммитить “new2.json” одной строчкой. -- git add new2.json && git commit -m " add new2.json"
+ 16. Отправить изменения на внешний репозиторий. -- git push
+ 17. Отредактировать содержание файла “new2.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML. 
+ -- nano new2.xml
+ <?xml version="1.0" encoding="UTF-8" ?>
+<user>
+    <name>Julia</name>
+    <age>27</age>
+    <pets />
+    <salary>1000</salary>
+</user>
+ 18. Добавить и закоммитить “new2.xml” одной строчкой. -- git add new2.xml && git commit -m " add new2.xml"
+ 19. Отправить изменения на внешний репозиторий. -- git push
+ 20. Отправить предыдущее домашнее задание по GitBush Terminal на внешний репозиторий. 
+ -- git add first_homework.txt
+ git commit -m "add first homework"
+ git push
+ 21. В веб интерфейсе GitHub создать файл new3.txt. -- add file -> create new file -> new3.txt
+ 22. Отредактировать в веб интерфейсе содержание файла “new3.txt” - написать информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить).
+ favourite movie: The Notebook,
+ favourite series: MONEY HEIST, 
+ favourite time of the year: spring,
+ country, wchich I want to visit: USA 
+ 23. Сделать Commit changes (сохранить) изменения на веб интерфейсе. -- commit changes
+ 24. Синхронизировать внешний и локальный репозитории (слить изменения с внешнего репозитория) -- git pull
+ 25. Отредактировать в веб интерфейсе содержание файла “new2.json” - добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить). Всё в формате JSON.
+ edit file
+ {
+ "name": "Julia",
+ "age": 27,
+ "pets": null,
+ "salary": 1000,
+ "favourite movie": "The Notebook",
+"favourite series": "MONEY HEIST", 
+"favourite time of the year": "spring",
+"country, wchich I want to visit": "USA" 
+}
+ 26. Сделать Commit changes (сохранить) изменения на веб интерфейсе. -- commit changes
+ 27. Синхронизировать внешний и локальный репозитории git pull
+ 28. Отредактировать в веб интерфейсе содержание файла “new2.xml” - добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить). Всё в формате XML. 
+ -- edit this file
+   <?xml version="1.0" encoding="UTF-8" ?>
+<user>
+    <name>Julia</name>
+    <age>27</age>
+    <pets />
+    <salary>1000</salary>
+    <favourite_movie>The Notebook</favourite_movie>
+    <favourite_series>MONEY HEIST</favourite_series>
+    <favourite_time_of_the_year>spring</favourite_time_of_the_year>
+    <country_wchich_I_want_to_visit>USA</country_wchich_I_want_to_visit>
+</user>
+ 29. Сделать Commit changes (сохранить) изменения на веб интерфейсе. -- commit changes
+ 30. Синхронизировать внешний и локальный репозитории git pull
+
+Данные для заполнения и редактирования файлов можете использовать любые, не обязательно свои.
