@@ -220,7 +220,7 @@
 							"pm.environment.set(\"name\", response.name);\r",
 							"pm.environment.set(\"age\", response.age);\r",
 							"pm.environment.set(\"salary\", response.salary[0]);\r",
-							"for(i=0;i<=2;i++){\r",
+							"for(i = 0; i < response.salary.length; i++){\r",
 							"    console.log(response.salary[i]);\r",
 							"}"
 						],
