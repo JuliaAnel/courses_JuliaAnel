@@ -98,8 +98,10 @@
 							"    pm.expect(response.qa_salary_after_12_months).to.eql(req.salary*2.9);\r",
 							"})\r",
 							"\r",
-							"\r",
-							"pm.environment.set(\"u_salary_1_5_year\", response.person.u_salary_1_5_year);\r",
+							"pm.test(\"salary\", () => {\r",
+							"    pm.expect(response.person.u_salary_1_5_year).to.eql(req.salary * 4);\r",
+							"pm.variables.get(\"variable_key\");\r",
+							"})\r",
 							"\r",
 							"let sendreq = {\r",
 							"    url: \"http://162.55.220.72:5005/get_test_user\",\r",
@@ -113,7 +115,7 @@
 							"        {key: \"auth_token\", value: pm.environment.get(\"token\"), disabled: false},\r",
 							"        {key: \"name\", value: pm.environment.get(\"name\"), disabled: false},\r",
 							"        {key: \"age\", value: pm.environment.get(\"age\"), disabled: false},\r",
-							"        {key: \"salary\", value: pm.environment.get(\"u_salary_1_5_year\"), disabled: false}]}\r",
+							"        {key: \"salary\", value: response.person.u_salary_1_5_year, disabled: false}]}\r",
 							"}\r",
 							"\r",
 							"pm.sendRequest(sendreq, function(err, res){\r",
@@ -194,22 +196,24 @@
 							"let req = request.data;\r",
 							"let response = pm.response.json();\r",
 							"\r",
-							"pm.test(\"salary\", function () {\r",
-							"    pm.expect(Number(response.salary[1])).to.eql(req.salary*2);\r",
+							"pm.test(\"salary\", () => {\r",
+							"    pm.expect(+response.salary[1]).to.eql(req.salary*2);\r",
 							"\r",
 							"})\r",
 							"\r",
-							"pm.test(\"salary\", function () {\r",
-							"    pm.expect(Number(response.salary[2])).to.eql(req.salary*3);\r",
+							"pm.test(\"salary\", () => {\r",
+							"    pm.expect(+response.salary[2]).to.eql(req.salary*3);\r",
 							"})\r",
 							"\r",
-							"\r",
-							"if(response.salary[2] > response.salary[1] && response.salary[2] > response.salary[0]){\r",
+							"if(+response.salary[2] > +response.salary[1] && response.salary[0]){\r",
 							"    console.log(\"2-ой элемент массива больше 1-го и нулевого!\")}\r",
 							"    else{\r",
 							"  console.log(\"2-ой элемент массива не больше 1-го и нулевого\")\r",
-							"  }\r",
-							"\r",
+							"    }\r",
+							"    //второй вариант сравнения элнментов массива\r",
+							"  pm.test(\"2-ой элемент массива больше 1-го и нулевого!\", () => {\r",
+							"     pm.expect(+response.salary[2]).to.greaterThan(+response.salary[1]).and.to.greaterThan(response.salary[0]);\r",
+							"  })\r",
 							""
 						],
 						"type": "text/javascript"
@@ -429,7 +433,8 @@
 							"\r",
 							"pm.test(\"age\", function () {\r",
 							"    pm.expect(Number(response.age)).to.eql(pm.environment.get(\"age\"));\r",
-							"})"
+							"})\r",
+							"console.log(typeof pm.environment.get(\"weight\"))"
 						],
 						"type": "text/javascript"
 					}
@@ -448,7 +453,7 @@
 						},
 						{
 							"key": "salary",
-							"value": "{{u_salary_1_5_year}}",
+							"value": "500",
 							"type": "text"
 						},
 						{
@@ -480,10 +485,15 @@
 					"script": {
 						"exec": [
 							"let response = pm.response.json();\r",
-							"\r",
-							"let item = response[Math.floor(Math.random()*response.length)];\r",
-							"console.log(item);\r",
-							"pm.environment.set(\"Cur_ID\", item.Cur_ID);"
+							"//let item = response[Math.floor(Math.random()*response.length)];\r",
+							"//console.log(item);\r",
+							"//pm.environment.set(\"Cur_ID\", item.Cur_ID);\r",
+							"function getRandomint (max) {\r",
+							"    return Math.floor(Math.random() * max)\r",
+							"}\r",
+							"const randomCurrId = getRandomint(response.length-1)\r",
+							"pm.environment.set(\"Cur_ID\", response[randomCurrId].Cur_ID)\r",
+							""
 						],
 						"type": "text/javascript"
 					}
