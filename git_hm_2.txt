@@ -1,5 +1,5 @@
 GitHub. HW_2
-1. На локальном репозитории сделать ветки для:
+1. РќР° Р»РѕРєР°Р»СЊРЅРѕРј СЂРµРїРѕР·РёС‚РѕСЂРёРё СЃРґРµР»Р°С‚СЊ РІРµС‚РєРё РґР»СЏ:
 - Postman git branch Postman
 - Jmeter git branch Jmeter
 - CheckLists --git branch CheckLists
@@ -8,18 +8,18 @@ GitHub. HW_2
 - Charles -- git branch Charles
 - Mobile testing -- git branch Mobile_testing
 
-2. Запушить все ветки на внешний репозиторий -- git push origin --all
-3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта 
+2. Р—Р°РїСѓС€РёС‚СЊ РІСЃРµ РІРµС‚РєРё РЅР° РІРЅРµС€РЅРёР№ СЂРµРїРѕР·РёС‚РѕСЂРёР№ -- git push origin --all
+3. Р’ РІРµС‚РєРµ Bag Reports СЃРґРµР»Р°С‚СЊ С‚РµРєСЃС‚РѕРІС‹Р№ РґРѕРєСѓРјРµРЅС‚ СЃРѕ СЃС‚СЂСѓРєС‚СѓСЂРѕР№ Р±Р°Рі СЂРµРїРѕСЂС‚Р° 
    git checkout BugReports touch bugreport_structure.txt (to use vim or nano to write structure)
-4. Запушить структуру багрепорта на внешний репозиторий 
+4. Р—Р°РїСѓС€РёС‚СЊ СЃС‚СЂСѓРєС‚СѓСЂСѓ Р±Р°РіСЂРµРїРѕСЂС‚Р° РЅР° РІРЅРµС€РЅРёР№ СЂРµРїРѕР·РёС‚РѕСЂРёР№ 
    git add bugreport_structure.txt; git commit -m "add bugreport_structure"; git push
-5. Вмержить ветку Bag Reports в Main
+5. Р’РјРµСЂР¶РёС‚СЊ РІРµС‚РєСѓ Bag Reports РІ Main
    git checkout master; git merge BugReports
-6. Запушить main на внешний репозиторий. -- git puch
-7. В ветке CheckLists набросать структуру чек листа.
+6. Р—Р°РїСѓС€РёС‚СЊ main РЅР° РІРЅРµС€РЅРёР№ СЂРµРїРѕР·РёС‚РѕСЂРёР№. -- git puch
+7. Р’ РІРµС‚РєРµ CheckLists РЅР°Р±СЂРѕСЃР°С‚СЊ СЃС‚СЂСѓРєС‚СѓСЂСѓ С‡РµРє Р»РёСЃС‚Р°.
    git checkout CheckLists; touch checklist_structure.txt; (to use vim or nano to write structure)
-8. Запушить структуру на внешний репозиторий 
+8. Р—Р°РїСѓС€РёС‚СЊ СЃС‚СЂСѓРєС‚СѓСЂСѓ РЅР° РІРЅРµС€РЅРёР№ СЂРµРїРѕР·РёС‚РѕСЂРёР№ 
    git add checklist_structure.txt; git commit -m "add checklist_structure"; git push
-9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+9. РќР° РІРЅРµС€РЅРµРј СЂРµРїРѕР·РёС‚РѕСЂРёРё СЃРґРµР»Р°С‚СЊ Pull Request РІРµС‚РєРё CheckLists РІ main
    to choose "Pull Request"; new Pull Request; Merge Pull Request; Confirm merge
-10. Синхронизировать Внешнюю и Локальную ветки Main -- git pull
+10. РЎРёРЅС…СЂРѕРЅРёР·РёСЂРѕРІР°С‚СЊ Р’РЅРµС€РЅСЋСЋ Рё Р›РѕРєР°Р»СЊРЅСѓСЋ РІРµС‚РєРё Main -- git pull
